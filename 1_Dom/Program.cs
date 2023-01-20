@@ -5,9 +5,12 @@ a = 2 b = 10 -> max = 10
 a = -9 b = -3 -> max = -3*/
 
 Console.WriteLine("Напиши первое целочисленное число:");
-int n1 = int.Parse(Console.ReadLine());
+int n1 = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Напиши второе целочисленное число:");
-int n2 = int.Parse(Console.ReadLine());
+int n2 = int.Parse(Console.ReadLine()!);
 int max = n1;
 if (n1<n2) max = n2;
+{
     Console.WriteLine($"Максимальное число {max}");
+}
+   
