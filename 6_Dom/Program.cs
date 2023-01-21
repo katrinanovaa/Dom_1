@@ -16,5 +16,5 @@ if (res>0)
 }
 else
 {
-    Console.WriteLine($"Третьей цифры не существует, увы(");
+    Console.WriteLine("Третьей цифры не существует, увы(");
 }
