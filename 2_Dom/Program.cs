@@ -40,8 +40,8 @@ while (true)
                     Console.WriteLine($"Максимальное число {n3}");
                     break;
                 }
-                break;
-            }
+            break;
+        }
 }
 
 
