@@ -3,6 +3,7 @@
 44 5 78 -> 78
 22 3 9 -> 22*/
 
+Console.Clear();
 while (true)
 {
     Console.WriteLine("Напиши первое целочисленное число:");
@@ -40,7 +41,6 @@ while (true)
                     Console.WriteLine($"Максимальное число {n3}");
                     break;
                 }
-            break;
         }
 }
 
