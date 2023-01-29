@@ -30,4 +30,4 @@ Console.WriteLine("Введите число А");
 int a = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число B");
 int b = int.Parse(Console.ReadLine()!);
-Console.WriteLine(Math.Round(Result(a, b), 6));
+Console.WriteLine(Math.Round(Result(a, b), 6)); // Использовала Round для укорочения нулей результата после запятой при b<0
