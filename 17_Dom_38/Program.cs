@@ -7,7 +7,7 @@ double[] GetArray(int size)
     double[] res = new double[size];
     for (int i = 0; i < size; i++)
     {
-        res[i] = Math.Round(new Random().NextDouble(), 3);     ///сгенерировать числа больше 1, с 3 знаками после ,
+        res[i] = Math.Round(new Random().NextDouble(), 3)+ new Random().Next(-1000,1000); 
     }
     return res;
 }
@@ -25,18 +25,14 @@ double Razn(double[] resultat)
             MinValue = resultat[i];
         }
     }
-    double raznica = MaxValue - MinValue;
+    double raznica = Math.Round(MaxValue - MinValue, 3);
     return raznica;
-    //return MinValue;
-    //return MaxValue;
 }
 
 Console.Clear();
 Console.WriteLine("Введите длину желаемого массива: ");
 int dlina = int.Parse(Console.ReadLine()!);
 double[] array = GetArray(dlina);
-/*Console.WriteLine($"Введите {dlina} дробных чисел (Используй .): ");
-double[] massive = double.Parse(Console.ReadLine()!);*/
 Console.Write("Сгенерированный массив: ");
 Console.WriteLine(String.Join(", ", array));
-Console.WriteLine($"Разница: {Razn(array)} ");
+Console.WriteLine($"Разница между максимальным и минимальным элементами равна: {Razn(array)} ");
