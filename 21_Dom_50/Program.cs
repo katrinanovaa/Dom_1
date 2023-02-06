@@ -24,28 +24,36 @@ void PrintArray(int[,] inArray)
     {
         for (int j=0; j< inArray.GetLength(1); j++)
         {
-            Console.Write($"{inArray[i,j]}\t ");
+            Console.Write("{0,8:F2}", $"{inArray[i,j]}\t");
         }
         Console.WriteLine();
     }
 }
 
-void FindPosition(int[,] inArray, int num1, int num2);
+void FindPosition(int[,] inArray, int num1, int num2)
 {
-    for(int i = 0; i < inArray.GetLength(0); i++) 
-    {
-        for (int j = 0; j < inArray.GetLength(1); j++)
-        {
-            if ((i==num1-1)&&(j==num2-1))
-            {
-                Console.WriteLine($"{inArray[i,j]} - данное число");
-            }
-            else 
-            {
-                Console.WriteLine("Такой позиции не существует");
-            }
-        }
-    }
+
+    if(num1>inArray.GetLength(0) || num2>inArray.GetLength(1))
+
+{
+
+    Console.WriteLine("Такой позиции не существует");
+}
+    int a = inArray[num1-1,num2-1];
+    Console.WriteLine(a);
+    // for(int i = 0; i < inArray.GetLength(0); i++) 
+    // {
+    //     for (int j = 0; j < inArray.GetLength(1); j++)
+    //     {
+    //         if ((i==num1-1)&&(j==num2-1))
+    //         {
+    //             Console.WriteLine($"{inArray[i,j]} - данное число");
+    //         }
+    //         else 
+    //         {
+    //         }
+    //     }
+    // }
 }
 
 Console.Clear();
