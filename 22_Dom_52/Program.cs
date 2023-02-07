@@ -41,7 +41,7 @@ double[] FindAverage(int[,] findArray)
         {
             average += findArray[j,i];
         }
-        result[i] = Math.Round(average/sizeColumn, 2);
+        result[i] = Math.Round(average/findArray.GetLength(0), 2);
     }
     return result;
 }
