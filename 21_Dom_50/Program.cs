@@ -32,41 +32,25 @@ void PrintArray(int[,] inArray)
 
 void FindPosition(int[,] inArray, int num1, int num2)
 {
-
     if(num1>inArray.GetLength(0) || num2>inArray.GetLength(1))
-
-{
-
-    Console.WriteLine("Такой позиции не существует");
-}
+    {
+        Console.WriteLine("Такой позиции не существует");
+    }
     int a = inArray[num1-1,num2-1];
     Console.WriteLine(a);
-    // for(int i = 0; i < inArray.GetLength(0); i++) 
-    // {
-    //     for (int j = 0; j < inArray.GetLength(1); j++)
-    //     {
-    //         if ((i==num1-1)&&(j==num2-1))
-    //         {
-    //             Console.WriteLine($"{inArray[i,j]} - данное число");
-    //         }
-    //         else 
-    //         {
-    //         }
-    //     }
-    // }
 }
 
 Console.Clear();
-Console.Write("введите количество строк в матрице: ");
+Console.Write("Введите количество строк в матрице: ");
 int row = int.Parse(Console.ReadLine()!);
-Console.Write("введите количество столбцов в матрице: ");
+Console.Write("Введите количество столбцов в матрице: ");
 int col = int.Parse(Console.ReadLine()!);
 int[,] array = GetArray(row,col);
 PrintArray(array);
 
-Console.Write("введите i индекс желаемого числа: ");
+Console.Write("Введите i индекс желаемой позиции числа: ");
 int rowIndex = int.Parse(Console.ReadLine()!);
-Console.Write("введите j индекс желаемого числа: ");
+Console.Write("Введите j индекс желаемой позиции числа: ");
 int colIndex = int.Parse(Console.ReadLine()!);
 FindPosition(array, rowIndex, colIndex);
 

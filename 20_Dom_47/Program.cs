@@ -23,7 +23,7 @@ void PrintArray(double[,] inArray)
     {
         for (int j=0; j< inArray.GetLength(1); j++)
         {
-            Console.Write($"{inArray[i,j]}\t ");
+            Console.Write("{0,8:F2}", $"{inArray[i,j]}\t ");   // {0,8:F2} - взято из чата, надо разбраться, как это работает
         }
         Console.WriteLine();
     }
