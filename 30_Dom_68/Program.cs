@@ -6,9 +6,9 @@ m = 3, n = 2 -> A(m,n) = 29*/
 Console.Clear();
 Console.WriteLine("Вычисление функции Аккермана");
 Console.WriteLine("Введите число m");
-int m = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число n");
-int n = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine()!);
 Console.WriteLine(Akkerman(m,n));
 
 int Akkerman(int n, int m)
